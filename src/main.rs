@@ -24,6 +24,10 @@ mod ch05_03_method_syntax;
 mod ch06_01_enums;
 mod ch06_02_match;
 mod ch06_03_if_let;
+mod ch07_02_module_scope;
+mod ch07_03_module_paths;
+mod ch07_04_module_use;
+mod ch07_05_module_files;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -40,6 +44,10 @@ use ch05_03_method_syntax as method_syntax;
 use ch06_01_enums as enums;
 use ch06_02_match as match_op;
 use ch06_03_if_let as if_let;
+use ch07_02_module_scope as module_scope;
+use ch07_03_module_paths as module_paths;
+use ch07_04_module_use as module_use;
+use ch07_05_module_files as module_files;
 
 use std::env;
 
@@ -65,6 +73,10 @@ fn main() {
             enums::run();
             match_op::run();
             if_let::run();
+            module_scope::run();
+            module_paths::run();
+            module_use::run();
+            module_files::run();
         }
         Command::Game => {
             guessing_game::run();
