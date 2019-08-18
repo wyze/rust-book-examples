@@ -6,6 +6,7 @@
     clippy::single_match,
     dead_code,
     unused_assignments,
+    unused_mut,
     unused_variables,
 )]
 
@@ -28,6 +29,9 @@ mod ch07_02_module_scope;
 mod ch07_03_module_paths;
 mod ch07_04_module_use;
 mod ch07_05_module_files;
+mod ch08_01_vectors;
+mod ch08_02_strings;
+mod ch08_03_hash_maps;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -48,6 +52,9 @@ use ch07_02_module_scope as module_scope;
 use ch07_03_module_paths as module_paths;
 use ch07_04_module_use as module_use;
 use ch07_05_module_files as module_files;
+use ch08_01_vectors as vectors;
+use ch08_02_strings as strings;
+use ch08_03_hash_maps as hash_maps;
 
 use std::env;
 
@@ -77,6 +84,9 @@ fn main() {
             module_paths::run();
             module_use::run();
             module_files::run();
+            vectors::run();
+            strings::run();
+            hash_maps::run();
         }
         Command::Game => {
             guessing_game::run();
