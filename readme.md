@@ -23,6 +23,12 @@ $ cargo run
 $ cargo run game
 ```
 
+### Run mean, median, and mode, program
+
+```sh
+$ cargo run mean-median-mode
+```
+
 ## License
 
 MIT © [Neil Kistner](https://neilkistner.com)

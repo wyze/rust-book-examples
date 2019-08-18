@@ -32,6 +32,7 @@ mod ch07_05_module_files;
 mod ch08_01_vectors;
 mod ch08_02_strings;
 mod ch08_03_hash_maps;
+mod ch08_mean_median_mode;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -55,12 +56,14 @@ use ch07_05_module_files as module_files;
 use ch08_01_vectors as vectors;
 use ch08_02_strings as strings;
 use ch08_03_hash_maps as hash_maps;
+use ch08_mean_median_mode as mean_median_mode;
 
 use std::env;
 
 enum Command {
     Default,
     Game,
+    MeanMedianMode,
 }
 
 fn main() {
@@ -87,10 +90,9 @@ fn main() {
             vectors::run();
             strings::run();
             hash_maps::run();
-        }
-        Command::Game => {
-            guessing_game::run();
-        }
+        },
+        Command::Game => guessing_game::run(),
+        Command::MeanMedianMode => mean_median_mode::run(),
     }
 }
 
@@ -103,6 +105,7 @@ fn get_command() -> Command {
 
     match args[1].as_str() {
         "game" => Command::Game,
+        "mean-median-mode" => Command::MeanMedianMode,
         _ => Command::Default,
     }
 }
