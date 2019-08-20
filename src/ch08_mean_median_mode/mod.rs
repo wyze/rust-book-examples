@@ -1,5 +1,4 @@
 use std::cmp::Ordering;
-use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::io;
 
@@ -82,23 +81,27 @@ fn get_median(numbers: &Vec<i32>) -> i32 {
 }
 
 fn get_mode(numbers: &Vec<i32>) -> Option<i32> {
-    let mut map: HashMap<i32, i32> = HashMap::new();
-    let mut mode: (i32, i32) = (0, 0);
+    let mode = numbers
+        .iter()
+        .fold(Vec::new(), |mut vec: Vec<(i32, i32)>, num| {
+            if let Some(index) = vec.iter().position(|(n, _)| n == num) {
+                let (_, count) = vec[index];
 
-    for num in numbers.iter() {
-        let count = map.entry(*num).or_insert(0);
+                vec[index] = (*num, count + 1);
+            } else {
+                vec.push((*num, 1));
+            }
 
-        *count += 1;
-    }
-
-    for (num, count) in &map {
-        if mode.1.cmp(count) == Ordering::Less {
-            mode = (*num, *count);
-        }
-    }
+            vec
+        })
+        .iter()
+        .fold((0, 0), |mode, item| match item {
+            (num, count) if mode.1.cmp(count) == Ordering::Less => (*num, *count),
+            _ => mode,
+        });
 
     match mode {
-        (_, 1) => None,
+        (_, 0) | (_, 1) => None,
         (num, _) => Some(num),
     }
 }
@@ -147,5 +150,12 @@ mod tests {
         let nums = vec![1, 2, 2, 3, 3, 4];
 
         assert_eq!(get_mode(&nums), Some(2));
+    }
+
+    #[test]
+    fn mode_when_empty_list() {
+        let nums = vec![];
+
+        assert_eq!(get_mode(&nums), None);
     }
 }
