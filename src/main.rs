@@ -33,6 +33,7 @@ mod ch08_01_vectors;
 mod ch08_02_strings;
 mod ch08_03_hash_maps;
 mod ch08_mean_median_mode;
+mod ch08_pig_latin;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -57,6 +58,7 @@ use ch08_01_vectors as vectors;
 use ch08_02_strings as strings;
 use ch08_03_hash_maps as hash_maps;
 use ch08_mean_median_mode as mean_median_mode;
+use ch08_pig_latin as pig_latin;
 
 use std::env;
 
@@ -64,6 +66,7 @@ enum Command {
     Default,
     Game,
     MeanMedianMode,
+    PigLatin,
 }
 
 fn main() {
@@ -93,6 +96,7 @@ fn main() {
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
+        Command::PigLatin => pig_latin::run(),
     }
 }
 
@@ -106,6 +110,7 @@ fn get_command() -> Command {
     match args[1].as_str() {
         "game" => Command::Game,
         "mean-median-mode" => Command::MeanMedianMode,
+        "pig-latin" => Command::PigLatin,
         _ => Command::Default,
     }
 }

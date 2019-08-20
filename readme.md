@@ -23,10 +23,16 @@ $ cargo run
 $ cargo run game
 ```
 
-### Run mean, median, and mode, program
+### Run mean, median, and mode program
 
 ```sh
 $ cargo run mean-median-mode
+```
+
+### Run pig latin program
+
+```sh
+$ cargo run pig-latin
 ```
 
 ## License
