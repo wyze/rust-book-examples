@@ -35,6 +35,12 @@ $ cargo run mean-median-mode
 $ cargo run pig-latin
 ```
 
+### Run company directory program
+
+```sh
+$ cargo run company-directory
+```
+
 ## License
 
 MIT © [Neil Kistner](https://neilkistner.com)
