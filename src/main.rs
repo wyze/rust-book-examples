@@ -36,6 +36,10 @@ mod ch08_mean_median_mode;
 mod ch08_pig_latin;
 mod ch08_company_directory;
 mod ch09_02_result;
+mod ch10_00_generics_intro;
+mod ch10_01_generics_syntax;
+mod ch10_02_traits;
+mod ch10_03_lifetimes;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -63,6 +67,10 @@ use ch08_mean_median_mode as mean_median_mode;
 use ch08_pig_latin as pig_latin;
 use ch08_company_directory as company_directory;
 use ch09_02_result as result;
+use ch10_00_generics_intro as generics_intro;
+use ch10_01_generics_syntax as generics_syntax;
+use ch10_02_traits as traits;
+use ch10_03_lifetimes as lifetimes;
 
 use std::env;
 
@@ -100,6 +108,10 @@ fn main() {
             strings::run();
             hash_maps::run();
             result::run();
+            generics_intro::run();
+            generics_syntax::run();
+            traits::run();
+            lifetimes::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
