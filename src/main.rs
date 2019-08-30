@@ -1,5 +1,6 @@
 // Only allowing them as I am following the examples in the book
 #![allow(
+    clippy::eq_op,
     clippy::let_and_return,
     clippy::many_single_char_names,
     clippy::ptr_arg,
@@ -40,6 +41,7 @@ mod ch10_00_generics_intro;
 mod ch10_01_generics_syntax;
 mod ch10_02_traits;
 mod ch10_03_lifetimes;
+mod ch11_01_writing_tests;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -71,6 +73,7 @@ use ch10_00_generics_intro as generics_intro;
 use ch10_01_generics_syntax as generics_syntax;
 use ch10_02_traits as traits;
 use ch10_03_lifetimes as lifetimes;
+use ch11_01_writing_tests as writing_tests;
 
 use std::env;
 
@@ -112,6 +115,7 @@ fn main() {
             generics_syntax::run();
             traits::run();
             lifetimes::run();
+            writing_tests::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
