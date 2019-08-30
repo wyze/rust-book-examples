@@ -42,6 +42,7 @@ mod ch10_01_generics_syntax;
 mod ch10_02_traits;
 mod ch10_03_lifetimes;
 mod ch11_01_writing_tests;
+mod ch12_minigrep;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -74,6 +75,7 @@ use ch10_01_generics_syntax as generics_syntax;
 use ch10_02_traits as traits;
 use ch10_03_lifetimes as lifetimes;
 use ch11_01_writing_tests as writing_tests;
+use ch12_minigrep as minigrep;
 
 use std::env;
 
@@ -82,6 +84,7 @@ enum Command {
     Default,
     Game,
     MeanMedianMode,
+    Minigrep,
     PigLatin,
 }
 
@@ -119,6 +122,7 @@ fn main() {
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
+        Command::Minigrep => minigrep::run(),
         Command::PigLatin => pig_latin::run(),
     }
 }
@@ -134,6 +138,7 @@ fn get_command() -> Command {
         "company-directory" => Command::CompanyDirectory,
         "game" => Command::Game,
         "mean-median-mode" => Command::MeanMedianMode,
+        "minigrep" => Command::Minigrep,
         "pig-latin" => Command::PigLatin,
         _ => Command::Default,
     }
