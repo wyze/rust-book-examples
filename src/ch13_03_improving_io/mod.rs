@@ -1,4 +1,4 @@
-use std::{env, process};
+use std::env;
 
 struct Config {
     case_sensitive: bool,
@@ -31,11 +31,7 @@ impl Config {
 }
 
 pub fn run() {
-    let config = Config::new(env::args()).unwrap_or_else(|err| {
-        eprintln!("Problem parsing arguments: {}", err);
-
-        process::exit(1);
-    });
+    let config = Config::new(env::args());
 }
 
 fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
