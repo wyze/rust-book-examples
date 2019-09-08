@@ -1,3 +1,7 @@
+//! # Rust Book examples
+//!
+//! `rust-book-examples` is my attempt at writing examples from the book.
+
 // Only allowing them as I am following the examples in the book
 #![allow(
     clippy::eq_op,
@@ -46,6 +50,7 @@ mod ch12_minigrep;
 mod ch13_01_closures;
 mod ch13_02_iterators;
 mod ch13_03_improving_io;
+mod ch14_02_publishing;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -82,6 +87,7 @@ use ch12_minigrep as minigrep;
 use ch13_01_closures as closures;
 use ch13_02_iterators as iterators;
 use ch13_03_improving_io as improving_io;
+use ch14_02_publishing as publishing;
 
 use std::env;
 
@@ -128,6 +134,7 @@ fn main() {
             closures::run();
             iterators::run();
             improving_io::run();
+            publishing::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
