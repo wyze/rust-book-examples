@@ -51,6 +51,12 @@ mod ch13_01_closures;
 mod ch13_02_iterators;
 mod ch13_03_improving_io;
 mod ch14_02_publishing;
+mod ch15_01_box;
+mod ch15_02_deref;
+mod ch15_03_drop;
+mod ch15_04_rc;
+mod ch15_05_interior_mutability;
+mod ch15_06_ref_cycle;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -88,6 +94,12 @@ use ch13_01_closures as closures;
 use ch13_02_iterators as iterators;
 use ch13_03_improving_io as improving_io;
 use ch14_02_publishing as publishing;
+use ch15_01_box as box_t;
+use ch15_02_deref as deref;
+use ch15_03_drop as drop;
+use ch15_04_rc as rc;
+use ch15_05_interior_mutability as interior_mutability;
+use ch15_06_ref_cycle as ref_cycle;
 
 use std::env;
 
@@ -135,6 +147,12 @@ fn main() {
             iterators::run();
             improving_io::run();
             publishing::run();
+            box_t::run();
+            deref::run();
+            drop::run();
+            rc::run();
+            interior_mutability::run();
+            ref_cycle::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
