@@ -57,6 +57,9 @@ mod ch15_03_drop;
 mod ch15_04_rc;
 mod ch15_05_interior_mutability;
 mod ch15_06_ref_cycle;
+mod ch16_01_threads;
+mod ch16_02_message_passing;
+mod ch16_03_shared_state;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -100,6 +103,9 @@ use ch15_03_drop as drop;
 use ch15_04_rc as rc;
 use ch15_05_interior_mutability as interior_mutability;
 use ch15_06_ref_cycle as ref_cycle;
+use ch16_01_threads as threads;
+use ch16_02_message_passing as message_passing;
+use ch16_03_shared_state as shared_state;
 
 use std::env;
 
@@ -153,6 +159,9 @@ fn main() {
             rc::run();
             interior_mutability::run();
             ref_cycle::run();
+            threads::run();
+            message_passing::run();
+            shared_state::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
