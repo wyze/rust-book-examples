@@ -7,6 +7,7 @@
     clippy::eq_op,
     clippy::let_and_return,
     clippy::many_single_char_names,
+    clippy::new_ret_no_self,
     clippy::ptr_arg,
     clippy::single_match,
     dead_code,
@@ -60,6 +61,9 @@ mod ch15_06_ref_cycle;
 mod ch16_01_threads;
 mod ch16_02_message_passing;
 mod ch16_03_shared_state;
+mod ch17_01_oop;
+mod ch17_02_trait_objects;
+mod ch17_03_oo_patterns;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -106,6 +110,9 @@ use ch15_06_ref_cycle as ref_cycle;
 use ch16_01_threads as threads;
 use ch16_02_message_passing as message_passing;
 use ch16_03_shared_state as shared_state;
+use ch17_01_oop as oop;
+use ch17_02_trait_objects as trait_objects;
+use ch17_03_oo_patterns as oo_patterns;
 
 use std::env;
 
@@ -162,6 +169,9 @@ fn main() {
             threads::run();
             message_passing::run();
             shared_state::run();
+            oop::run();
+            trait_objects::run();
+            oo_patterns::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
