@@ -9,7 +9,9 @@
     clippy::many_single_char_names,
     clippy::new_ret_no_self,
     clippy::ptr_arg,
+    clippy::redundant_pattern_matching,
     clippy::single_match,
+    clippy::trivially_copy_pass_by_ref,
     dead_code,
     unused_assignments,
     unused_mut,
@@ -64,6 +66,8 @@ mod ch16_03_shared_state;
 mod ch17_01_oop;
 mod ch17_02_trait_objects;
 mod ch17_03_oo_patterns;
+mod ch18_01_pattern_uses;
+mod ch18_03_pattern_syntax;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -113,6 +117,8 @@ use ch16_03_shared_state as shared_state;
 use ch17_01_oop as oop;
 use ch17_02_trait_objects as trait_objects;
 use ch17_03_oo_patterns as oo_patterns;
+use ch18_01_pattern_uses as pattern_uses;
+use ch18_03_pattern_syntax as pattern_syntax;
 
 use std::env;
 
@@ -172,6 +178,8 @@ fn main() {
             oop::run();
             trait_objects::run();
             oo_patterns::run();
+            pattern_uses::run();
+            pattern_syntax::run();
         },
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
