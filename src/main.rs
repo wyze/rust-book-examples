@@ -15,7 +15,7 @@
     dead_code,
     unused_assignments,
     unused_mut,
-    unused_variables,
+    unused_variables
 )]
 
 mod ch01_03_hello_world;
@@ -40,9 +40,9 @@ mod ch07_05_module_files;
 mod ch08_01_vectors;
 mod ch08_02_strings;
 mod ch08_03_hash_maps;
+mod ch08_company_directory;
 mod ch08_mean_median_mode;
 mod ch08_pig_latin;
-mod ch08_company_directory;
 mod ch09_02_result;
 mod ch10_00_generics_intro;
 mod ch10_01_generics_syntax;
@@ -68,6 +68,11 @@ mod ch17_02_trait_objects;
 mod ch17_03_oo_patterns;
 mod ch18_01_pattern_uses;
 mod ch18_03_pattern_syntax;
+mod ch19_01_unsafe_rust;
+mod ch19_03_advanced_traits;
+mod ch19_04_advanced_types;
+mod ch19_05_advanced_functions_closures;
+mod ch19_06_macros;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -91,9 +96,9 @@ use ch07_05_module_files as module_files;
 use ch08_01_vectors as vectors;
 use ch08_02_strings as strings;
 use ch08_03_hash_maps as hash_maps;
+use ch08_company_directory as company_directory;
 use ch08_mean_median_mode as mean_median_mode;
 use ch08_pig_latin as pig_latin;
-use ch08_company_directory as company_directory;
 use ch09_02_result as result;
 use ch10_00_generics_intro as generics_intro;
 use ch10_01_generics_syntax as generics_syntax;
@@ -119,6 +124,11 @@ use ch17_02_trait_objects as trait_objects;
 use ch17_03_oo_patterns as oo_patterns;
 use ch18_01_pattern_uses as pattern_uses;
 use ch18_03_pattern_syntax as pattern_syntax;
+use ch19_01_unsafe_rust as unsafe_rust;
+use ch19_03_advanced_traits as advanced_traits;
+use ch19_04_advanced_types as advanced_types;
+use ch19_05_advanced_functions_closures as advanced_functions_closures;
+use ch19_06_macros as macros;
 
 use std::env;
 
@@ -180,7 +190,12 @@ fn main() {
             oo_patterns::run();
             pattern_uses::run();
             pattern_syntax::run();
-        },
+            unsafe_rust::run();
+            advanced_traits::run();
+            advanced_types::run();
+            advanced_functions_closures::run();
+            macros::run();
+        }
         Command::Game => guessing_game::run(),
         Command::MeanMedianMode => mean_median_mode::run(),
         Command::Minigrep => minigrep::run(),

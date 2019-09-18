@@ -1,12 +1,13 @@
 [package]
-name = "rust-book-examples"
+name = "hello_macro_derive"
 version = "0.1.0"
 authors = ["Neil Kistner <neil.kistner@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+proc-macro = true
 
 [dependencies]
-rand = "0.7.0"
-hello_macro = { path = "hello_macro" }
-hello_macro_derive = { path = "hello_macro_derive" }
+syn = "0.14.4"
+quote = "0.6.3"
