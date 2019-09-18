@@ -55,13 +55,13 @@ fn add_employee(directory: &mut Directory) {
             if employee.is_empty() {
                 println!("Employee name cannot be empty.");
 
-                return
+                return;
             }
 
             if department.is_empty() {
                 println!("Department name cannot be empty.");
 
-                return
+                return;
             }
 
             directory

@@ -20,4 +20,3 @@ pub fn run() {
         process::exit(1);
     };
 }
-

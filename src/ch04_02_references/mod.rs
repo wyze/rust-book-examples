@@ -37,10 +37,11 @@ pub fn run() {
     // let reference_to_nothing = dangle();
 }
 
-fn calculate_length(s: &String) -> usize {  // s is a reference to a String
+fn calculate_length(s: &String) -> usize {
+    // s is a reference to a String
     s.len()
-}   // Here, s goes out of scope. But because it does not have ownership of
-    // what it refers to, nothing happens.
+} // Here, s goes out of scope. But because it does not have ownership of
+  // what it refers to, nothing happens.
 
 fn change(some_string: &mut String) {
     some_string.push_str(", world");

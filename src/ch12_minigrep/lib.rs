@@ -19,7 +19,11 @@ impl Config {
         let query = args[2].clone();
         let filename = args[3].clone();
 
-        Ok(Self { case_sensitive, filename, query })
+        Ok(Self {
+            case_sensitive,
+            filename,
+            query,
+        })
     }
 }
 

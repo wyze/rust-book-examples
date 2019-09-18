@@ -44,7 +44,6 @@ pub fn run() {
     hello(&(*m)[..]);
 }
 
-
 fn hello(name: &str) {
     println!("Hello {}!", name);
 }

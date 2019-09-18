@@ -71,7 +71,7 @@ pub fn run() {
         None,
     }
 
-    enum OptionF64  {
+    enum OptionF64 {
         Some(f64),
         None,
     }

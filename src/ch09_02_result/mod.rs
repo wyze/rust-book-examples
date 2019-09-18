@@ -1,5 +1,5 @@
-use std::fs::{self, File};
 use std::error::Error;
+use std::fs::{self, File};
 use std::io::{self, ErrorKind, Read};
 
 const FILENAME: &str = "target/hello.txt";

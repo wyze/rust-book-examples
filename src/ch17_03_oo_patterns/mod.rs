@@ -4,7 +4,7 @@ fn process_pending(mut post: v2::PendingReviewPost) -> v2::Post {
     loop {
         post = match post.approve() {
             v2::ApproveResult::Approved(p) => return p,
-            v2::ApproveResult::Pending(p) => p
+            v2::ApproveResult::Pending(p) => p,
         }
     }
 }
@@ -233,7 +233,6 @@ mod blog {
                         content: self.content,
                     })
                 }
-
             }
 
             pub fn reject(self) -> DraftPost {

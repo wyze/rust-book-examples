@@ -49,6 +49,4 @@ pub fn run() {
     let absent_number: Option<i32> = None;
 }
 
-fn route(ip_kind: IpAddrKind) {
-
-}
+fn route(ip_kind: IpAddrKind) {}

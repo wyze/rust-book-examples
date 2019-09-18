@@ -20,7 +20,9 @@ pub fn run() {
 
     println!("CustomSmartPointers created.");
 
-    let c = CustomSmartPointer{data:String::from("some data")};
+    let c = CustomSmartPointer {
+        data: String::from("some data"),
+    };
 
     println!("CustomSmartPointer created.");
 
