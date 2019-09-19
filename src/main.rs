@@ -73,6 +73,7 @@ mod ch19_03_advanced_traits;
 mod ch19_04_advanced_types;
 mod ch19_05_advanced_functions_closures;
 mod ch19_06_macros;
+mod ch20_web_server;
 
 use ch01_03_hello_world as hello_world;
 use ch02_00_guessing_game as guessing_game;
@@ -129,6 +130,7 @@ use ch19_03_advanced_traits as advanced_traits;
 use ch19_04_advanced_types as advanced_types;
 use ch19_05_advanced_functions_closures as advanced_functions_closures;
 use ch19_06_macros as macros;
+use ch20_web_server as webserver;
 
 use std::env;
 
@@ -139,6 +141,7 @@ enum Command {
     MeanMedianMode,
     Minigrep,
     PigLatin,
+    WebServer,
 }
 
 fn main() {
@@ -200,6 +203,7 @@ fn main() {
         Command::MeanMedianMode => mean_median_mode::run(),
         Command::Minigrep => minigrep::run(),
         Command::PigLatin => pig_latin::run(),
+        Command::WebServer => webserver::run(),
     }
 }
 
@@ -216,6 +220,7 @@ fn get_command() -> Command {
         "mean-median-mode" => Command::MeanMedianMode,
         "minigrep" => Command::Minigrep,
         "pig-latin" => Command::PigLatin,
+        "web-server" => Command::WebServer,
         _ => Command::Default,
     }
 }

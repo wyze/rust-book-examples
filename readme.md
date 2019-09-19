@@ -41,6 +41,12 @@ $ cargo run pig-latin
 $ cargo run company-directory
 ```
 
+### Run web server
+
+```sh
+$ cargo run web-server
+```
+
 ## License
 
 MIT © [Neil Kistner](https://neilkistner.com)
